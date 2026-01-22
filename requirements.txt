@@ -4,9 +4,10 @@ pandas<3
 scikit-learn
 xgboost
 plotly
-transformers
+transformers==4.37.0
 torch>=2.5.0
 gdown
+
 
 
 
