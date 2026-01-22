@@ -6,6 +6,8 @@ xgboost
 plotly
 transformers
 torch>=2.5.0
+gdown
+
 
 
 
