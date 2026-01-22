@@ -1,0 +1,2 @@
+# Ignore model file for emotion model
+emotion_bert_model/model.safetensors
