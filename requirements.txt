@@ -5,5 +5,6 @@ scikit-learn
 xgboost
 plotly
 transformers
+torch==2.2.2
 
 
