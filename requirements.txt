@@ -1,9 +1,8 @@
-streamlit>=1.40.0
-pandas>=2.1.0
-numpy>=1.26.0
-scikit-learn>=1.4.0
-xgboost>=2.0.0
-plotly>=5.24.0
-
-transformers>=4.37.0
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+plotly
+transformers
 torch==2.2.2
