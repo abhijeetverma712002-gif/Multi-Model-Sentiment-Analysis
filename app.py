@@ -70,6 +70,12 @@ def load_model(model_type):
     try:
         # Check if this is a BERT model
         if config.get("model_type") == "bert":
+            # Ensure pytorch_model.bin exists for transformers compatibility
+            safetensors_path = os.path.join(config["model_file"], "model.safetensors")
+            bin_path = os.path.join(config["model_file"], "pytorch_model.bin")
+            if os.path.exists(safetensors_path) and not os.path.exists(bin_path):
+                import shutil
+                shutil.copy(safetensors_path, bin_path)
             # Load BERT model and tokenizer
             model = BertForSequenceClassification.from_pretrained(config["model_file"])
             tokenizer = BertTokenizer.from_pretrained(config["model_file"])
@@ -668,3 +674,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
